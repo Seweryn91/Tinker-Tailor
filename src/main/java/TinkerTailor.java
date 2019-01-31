@@ -31,4 +31,15 @@ public class TinkerTailor {
         this.N = N;
         this.K = K;
     }
+
+    private void addPlayers(int N) {
+
+        for (int i = 0; i < N; i++) {
+            Player player = new Player();
+            player.setName(i + 1 + "");
+            players.add(player);
+            //System.out.println("Player " + player.getName() + " added.");
+        }
+    }
+
 }
