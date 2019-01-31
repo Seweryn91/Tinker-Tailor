@@ -42,4 +42,18 @@ public class TinkerTailor {
         }
     }
 
+    private void tinker(int N, int K) {
+        int indexToRemove = 0;
+
+        while (N > 1) {
+            indexToRemove = (indexToRemove + K - 1) % N;
+            System.out.println("Player " + players.get(indexToRemove).getName() + " removed.");
+            players.remove(indexToRemove);
+            N--;
+        }
+        if (N == 1) {
+            System.out.println("Player " + players.get(0).getName() + " wins!");
+        }
+    }
+
 }
