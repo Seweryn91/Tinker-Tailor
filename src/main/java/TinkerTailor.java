@@ -30,6 +30,8 @@ public class TinkerTailor {
 
         this.N = N;
         this.K = K;
+        addPlayers(N);
+        tinker(N, K);
     }
 
     private void addPlayers(int N) {
