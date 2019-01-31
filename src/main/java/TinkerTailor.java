@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class TinkerTailor {
 
     private int N; //number of players in circle
@@ -16,4 +19,16 @@ public class TinkerTailor {
         }
     }
 
+
+    private List<Player> players = new LinkedList<>();
+
+    public TinkerTailor(int N, int K) throws IllegalArgumentException {
+        if (N < 2)
+            throw new IllegalArgumentException("Number of players cannot be less than 2");
+        if (K < 1)
+            throw new IllegalArgumentException("Sequence cannot be shorter than 1");
+
+        this.N = N;
+        this.K = K;
+    }
 }
